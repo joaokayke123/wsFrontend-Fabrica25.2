@@ -5,8 +5,8 @@ type ButtonsProps = {
   showFavorites: () => void;
   showFavoritesOnly: boolean;
   favoritesCount: number;
-  isGridView: boolean; // indica se está em grid
-  toggleView: () => void; // função para alternar
+  isGridView: boolean; 
+  toggleView: () => void; 
 };
 
 export default function Buttons({

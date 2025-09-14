@@ -27,7 +27,6 @@ const Navbar: React.FC<NavbarProps> = ({ pokemonFilter }) => {
                 fontSize="medium"
               />
 
-              {/* Substituímos o input pelo TextField */}
               <TextField
                 fullWidth
                 placeholder="Pesquisar..."
@@ -37,8 +36,8 @@ const Navbar: React.FC<NavbarProps> = ({ pokemonFilter }) => {
                 sx={{
                   '& .MuiOutlinedInput-root': {
                     color: 'white',
-                    backgroundColor: '#1f2937', // mesma cor do seu input original bg-gray-800
-                    borderColor: '#4b5563', // mesma cor da borda border-gray-600
+                    backgroundColor: '#1f2937', 
+                    borderColor: '#4b5563',
                   },
                   '& .MuiOutlinedInput-notchedOutline': {
                     borderColor: '#4b5563',
@@ -47,10 +46,10 @@ const Navbar: React.FC<NavbarProps> = ({ pokemonFilter }) => {
                     borderColor: '#4b5563',
                   },
                   '& .MuiInputBase-input': {
-                    paddingLeft: '2.5rem', // espaço para o ícone
+                    paddingLeft: '2.5rem',
                   },
                   '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                    borderColor: '#3b82f6', // cor do foco
+                    borderColor: '#3b82f6',
                   },
                   '& .MuiInputBase-input::placeholder': {
                     color: 'white',

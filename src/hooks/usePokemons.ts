@@ -1,4 +1,3 @@
-// hooks/usePokemons.ts
 'use client';
 
 import { useState, useEffect, useCallback } from 'react';
@@ -68,7 +67,6 @@ export const usePokemons = (pokemonsPerPage: number = 20, maxPokemonId: number =
     [pokemonsPerPage, maxPokemonId]
   );
 
-  // Agora o useEffect pode incluir getPokemons:
   useEffect(() => {
     if (!showFavoritesOnly) getPokemons(currentPage);
   }, [currentPage, showFavoritesOnly, getPokemons]);

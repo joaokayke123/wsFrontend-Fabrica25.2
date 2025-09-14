@@ -76,9 +76,9 @@ export default function PokemonCard({
     <Card
       className="hover:scale-105 transition-transform duration-200"
       sx={{
-        width: '100%', // ocupa 100% da coluna do grid
-        maxWidth: 250, // tamanho máximo no desktop
-        height: 380, // altura fixa
+        width: '100%', 
+        maxWidth: 250, 
+        height: 380,
         cursor: 'pointer',
         position: 'relative',
         display: 'flex',
@@ -158,7 +158,7 @@ export default function PokemonCard({
             sx={{
               fontWeight: 'bold',
               wordBreak: 'break-word',
-              color: 'white', // nomes longos quebram linha
+              color: 'white', 
             }}
           >
             {capitalize(name)}
