@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+Este repositório contém o frontend do projeto Fábrica 25.2, desenvolvido como parte do curso de formação da Fábrica de Software 25.2
+. O projeto foi construído utilizando as tecnologias:
 
-## Getting Started
+Next.js: Framework React para renderização do lado do servidor (SSR) e geração de sites estáticos (SSG).
 
-First, run the development server:
+Tailwind CSS: Framework de utilitários para design responsivo e moderno.
 
-```bash
+TypeScript: Superset do JavaScript que adiciona tipagem estática.
+
+🚀 Instruções de Execução
+
+Para rodar o projeto localmente, siga os passos abaixo:
+
+Clone o repositório:
+
+git clone https://github.com/joaokayke123/wsFrontend-Fabrica25.2.git
+
+
+Navegue até o diretório do projeto:
+
+cd wsFrontend-Fabrica25.2
+
+
+Instale as dependências:
+
+npm install
+
+
+Inicie o servidor de desenvolvimento:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Abra o navegador e acesse:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+📦 Tecnologias Utilizadas
 
-To learn more about Next.js, take a look at the following resources:
+Next.js: Para construção de interfaces React com renderização do lado do servidor.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Tailwind CSS: Para estilização rápida e responsiva.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+TypeScript: Para desenvolvimento com tipagem estática.
 
-## Deploy on Vercel
+Prettier: Para formatação de código consistente.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+ESLint: Para análise estática e identificação de problemas no código.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+📸 Demonstração
+
+🔗 Links Úteis
+
+Deploy do projeto
+
+Repositório Backend
+
+👨‍💻 Sobre o Desenvolvedor
+
+Olá, sou João Kayke, estudante de Desenvolvimento Web e participante da Fábrica de Software 25.2. Este projeto é parte do meu aprendizado e prática com tecnologias modernas de desenvolvimento frontend.
