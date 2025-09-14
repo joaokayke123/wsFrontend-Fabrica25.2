@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import React from "react";
+import React from 'react';
 
 export interface PaginationProps {
   currentPage: number;
@@ -29,7 +29,7 @@ const Pagination: React.FC<PaginationProps> = ({
     // Primeira página
     if (start > 1) {
       pages.push(1);
-      if (start > 2) pages.push("...");
+      if (start > 2) pages.push('...');
     }
 
     // Páginas próximas à atual
@@ -39,7 +39,7 @@ const Pagination: React.FC<PaginationProps> = ({
 
     // Última página
     if (end < totalPages) {
-      if (end < totalPages - 1) pages.push("...");
+      if (end < totalPages - 1) pages.push('...');
       pages.push(totalPages);
     }
 
@@ -53,7 +53,6 @@ const Pagination: React.FC<PaginationProps> = ({
   const goToLastPage = () => {
     onPageChange(totalPages);
   };
-
 
   return (
     <div className="pagination-container">
@@ -83,17 +82,15 @@ const Pagination: React.FC<PaginationProps> = ({
         {getPageNumbers().map((page, index) => (
           <button
             key={index}
-            onClick={() =>
-              typeof page === "number" ? onPageChange(page) : undefined
-            }
+            onClick={() => (typeof page === 'number' ? onPageChange(page) : undefined)}
             className={`px-3 py-2 rounded-md transition-colors ${
               page === currentPage
-                ? "bg-bottonHover text-white"
-                : typeof page === "number"
-                  ? "bg-blueBotton text-white hover:bg-bottonHover"
-                  : "bg-transparent text-gray-400 cursor-default"
+                ? 'bg-bottonHover text-white'
+                : typeof page === 'number'
+                  ? 'bg-blueBotton text-white hover:bg-bottonHover'
+                  : 'bg-transparent text-gray-400 cursor-default'
             }`}
-            disabled={typeof page !== "number"}
+            disabled={typeof page !== 'number'}
           >
             {page}
           </button>

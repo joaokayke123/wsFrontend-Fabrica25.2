@@ -1,8 +1,8 @@
-"use client";
-import Image from "next/image";
-import React from "react";
-import { TextField } from "@mui/material";
-import SearchIcon from "@mui/icons-material/Search";
+'use client';
+import Image from 'next/image';
+import React from 'react';
+import { TextField } from '@mui/material';
+import SearchIcon from '@mui/icons-material/Search';
 
 type NavbarProps = {
   pokemonFilter: (value: string) => void; // função que recebe a string do filtro
@@ -35,26 +35,25 @@ const Navbar: React.FC<NavbarProps> = ({ pokemonFilter }) => {
                 size="small"
                 onChange={(e) => pokemonFilter(e.target.value)}
                 sx={{
-                  "& .MuiOutlinedInput-root": {
-                    color: "white",
-                    backgroundColor: "#1f2937", // mesma cor do seu input original bg-gray-800
-                    borderColor: "#4b5563", // mesma cor da borda border-gray-600
+                  '& .MuiOutlinedInput-root': {
+                    color: 'white',
+                    backgroundColor: '#1f2937', // mesma cor do seu input original bg-gray-800
+                    borderColor: '#4b5563', // mesma cor da borda border-gray-600
                   },
-                  "& .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#4b5563",
+                  '& .MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#4b5563',
                   },
-                  "&:hover .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#4b5563",
+                  '&:hover .MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#4b5563',
                   },
-                  "& .MuiInputBase-input": {
-                    paddingLeft: "2.5rem", // espaço para o ícone
+                  '& .MuiInputBase-input': {
+                    paddingLeft: '2.5rem', // espaço para o ícone
                   },
-                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
-                    {
-                      borderColor: "#3b82f6", // cor do foco
-                    },
-                  "& .MuiInputBase-input::placeholder": {
-                    color: "white",
+                  '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
+                    borderColor: '#3b82f6', // cor do foco
+                  },
+                  '& .MuiInputBase-input::placeholder': {
+                    color: 'white',
                     opacity: 0.6,
                   },
                 }}

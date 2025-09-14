@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 type ButtonsProps = {
   showAll: () => void;
@@ -23,8 +23,8 @@ export default function Buttons({
         onClick={showAll}
         className={`px-6 py-2 rounded-lg transition-colors bg-blueBotton ${
           !showFavoritesOnly
-            ? "bg-bottonPag text-white"
-            : "bg-blueBotton text-white hover:bg-bottonHover"
+            ? 'bg-bottonPag text-white'
+            : 'bg-blueBotton text-white hover:bg-bottonHover'
         }`}
       >
         Todos os Pokémon
@@ -33,8 +33,8 @@ export default function Buttons({
         onClick={showFavorites}
         className={`px-6 py-2 rounded-lg transition-colors flex items-center gap-2 bg-blueBotton ${
           showFavoritesOnly
-            ? "bg-bottonPag text-white"
-            : "bg-blueBotton text-white hover:bg-bottonHover"
+            ? 'bg-bottonPag text-white'
+            : 'bg-blueBotton text-white hover:bg-bottonHover'
         }`}
       >
         ❤️ Favoritos ({favoritesCount})
@@ -43,7 +43,7 @@ export default function Buttons({
         onClick={toggleView}
         className="px-6 py-2 rounded-lg bg-blueBotton text-white hover:bg-bottonHover transition-colors"
       >
-        {isGridView ? "Ver em Lista" : "Ver em Grid"}
+        {isGridView ? 'Ver em Lista' : 'Ver em Grid'}
       </button>
     </div>
   );
