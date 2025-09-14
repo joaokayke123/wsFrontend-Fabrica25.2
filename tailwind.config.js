@@ -6,11 +6,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        blueBotton: '#382f69',
-        bottonPag: '#231746',
-        bottonHover: '#231746',
+        blueBotton: "#382f69",
+        bottonPag: "#231746",
+        bottonHover: "#231746",
       },
     },
   },
   plugins: [],
-}
+};

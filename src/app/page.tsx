@@ -25,71 +25,67 @@ export default function HomePage() {
     totalPages,
     handlePageChange,
     handlePreviousPage,
-    handleNextPage
+    handleNextPage,
   } = usePokemons();
-  
-  const [isGridView, setIsGridView] = useState (true);
-  const toggleView = () => setIsGridView(prev => !prev);
+
+  const [isGridView, setIsGridView] = useState(true);
+  const toggleView = () => setIsGridView((prev) => !prev);
 
   //ANIMAÇÃO PARA LOADING
-  if (loading) return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="text-center">
-        <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-        <p className="text-gray-600">Carregando Pokémon...</p>
+  if (loading)
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Carregando Pokémon...</p>
+        </div>
       </div>
-    </div>
-  );
+    );
 
   return (
     <div>
       <Navbar pokemonFilter={handleSearch} />
 
       <Container maxWidth="xl">
-
         {/* BOTÃO FAVORITO E TODOS */}
         <Buttons
-         showAll={showAll}
-       showFavorites={showFavorites}
-  showFavoritesOnly={showFavoritesOnly}
-  favoritesCount={favorites.size}
-  isGridView={isGridView}
-  toggleView={toggleView}
-/>
-
+          showAll={showAll}
+          showFavorites={showFavorites}
+          showFavoritesOnly={showFavoritesOnly}
+          favoritesCount={favorites.size}
+          isGridView={isGridView}
+          toggleView={toggleView}
+        />
 
         {/* POKEMON CARD */}
         <div
-  className={`flex ${isGridView ? 'flex-wrap justify-center gap-4' : 'flex-col items-center gap-4'} min-h-96 w-full`}
->
-  {pokemons.map(pokemon => (
-    <div
-      key={pokemon.id}
-      style={{
-        width: isGridView ? "calc(25% - 16px)" : "300px", // largura fixa para lista
-      }}
-    >
-      <PokemonCard
-        id={pokemon.id}
-        name={pokemon.name}
-        image={pokemon.sprites.front_default}
-        types={pokemon.types}
-        isFavorite={favorites.has(pokemon.id)}
-        onFavorite={() =>
-          handleFavorite({
-            id: pokemon.id,
-            name: pokemon.name,
-            image: pokemon.sprites.front_default,
-            types: pokemon.types,
-          })
-        }
-      />
-    </div>
-  ))}
-</div>
-
-
-
+          className={`flex ${isGridView ? "flex-wrap justify-center gap-4" : "flex-col items-center gap-4"} min-h-96 w-full`}
+        >
+          {pokemons.map((pokemon) => (
+            <div
+              key={pokemon.id}
+              style={{
+                width: isGridView ? "calc(25% - 16px)" : "300px", // largura fixa para lista
+              }}
+            >
+              <PokemonCard
+                id={pokemon.id}
+                name={pokemon.name}
+                image={pokemon.sprites.front_default}
+                types={pokemon.types}
+                isFavorite={favorites.has(pokemon.id)}
+                onFavorite={() =>
+                  handleFavorite({
+                    id: pokemon.id,
+                    name: pokemon.name,
+                    image: pokemon.sprites.front_default,
+                    types: pokemon.types,
+                  })
+                }
+              />
+            </div>
+          ))}
+        </div>
 
         {/* PAGINAÇÃO */}
         {!showFavoritesOnly && !searchTerm && (
@@ -102,7 +98,7 @@ export default function HomePage() {
           />
         )}
       </Container>
-      
+
       {/* FOOTER */}
       <Footer />
     </div>

@@ -49,9 +49,10 @@ const Navbar: React.FC<NavbarProps> = ({ pokemonFilter }) => {
                   "& .MuiInputBase-input": {
                     paddingLeft: "2.5rem", // espaço para o ícone
                   },
-                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                    borderColor: "#3b82f6", // cor do foco
-                  },
+                  "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                    {
+                      borderColor: "#3b82f6", // cor do foco
+                    },
                   "& .MuiInputBase-input::placeholder": {
                     color: "white",
                     opacity: 0.6,
